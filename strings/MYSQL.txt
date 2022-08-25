@@ -1,0 +1,118 @@
+database ko show krne ke liye show database 
+db ko use krne ke liye use database
+delete krne ke liye drop database <DB name>
+create krne ke liye create database youtube
+lot of datatypes in sql but mainly 3 
+for eg- numeric types,string types,date types
+numeric me float,int,double
+string denoted by Varchar(size specify kro) 0-255 '' commas ke andar;
+integer by int;
+data types date 
+to create table  syntax- create table tablename 
+(
+    coloumn name datatype;
+    coloumn name  datatype;
+);
+no sql horizontal sql vertical 
+to delete table drop table tablename ;
+table ko describe krna ho to describe table;
+desc tablename;
+
+create table student(
+    name varchar(30),
+    age int,
+    class int
+);
+
+to insert in a table
+insert into tablename(coloumn1,coloumn2,coloumn3)
+values(value1,value2,value3);
+ for eg- insert into students
+ ('vinod',13,8);
+ direct values likhi humne
+
+ to show a table
+ select * from students;  isse saara data show ho jaega table ka 
+ to delete and add in existing table we use alter
+ for eg- table hai student isme id nhi hai to 
+ alter table student add school varchar(70);
+ agar hame delete krna ho to
+ alter table student drop coloumn class;
+
+ null ko agar not null kr do to value 0 aajaegi aur agar default value set krdo to wo aajaegi agar khaali chod 
+ do jagah ko to
+
+ create table stu(
+     name  varchar(30) not null default 'unnamed',
+     age int not null default 0
+ );
+ primary key wo key hoti hai jo ki unique hoti hai har databse ki aur bahut kaam me aati hai it cannot be null
+   
+   create table stuprimary(
+       stuid int not null,
+       name varchar(50),
+       age int
+   );
+   select * from stuprimary;
+
+   agar primary key bnnai ho to 
+   create table primer(
+       stuid int not null,
+       name varchar(30),
+       primary key(stuid)
+   ) ;
+
+   insert into primer(stuid,name) values(1,'bannu');
+   agar primary key ko apne aap badhte dekhna chahte ho to add auto increment in primary key ;
+
+   where clause bhi hota hai 
+   select* from students where age=16;
+   select name,stuid from students where age=20;
+
+   update clause bhi hota hai update krne ke liye values ko jaise hame kisi ki age badalni ho
+   update students set age=23 where name="vinod";
+
+    delete bhi kr skte hai using delete from students where name="Ramesh"  ;
+
+    select distinct fname from students  ka use krke distinct value bhi retrieve kr skte hai 
+    order by se ascending ya descending me aajata hai data 
+
+    like ka istemaal krke aap nikaal skte hai wo naam jo isse milte julte ho mtlb maan lo aapko aadha naam yaad hai aur aada nhi to fir like
+    ka istemaal krke aap nikaal lo 
+    select fname from students where fname like "v%";
+
+    Aggregate functions
+     select max(age) from students;
+     select count(id) from students;
+     select sum(age) from students;
+     select avg(age) from students;
+
+     select concat(fname,' ',lname) from students as fullname; 
+
+     pehle ek table bnao with primary key
+     create table ptable(
+         cid int auto-increment primary key,
+         name varchar(60),
+         age int
+     );
+     fir dusri table bnao
+      
+      create table ftable(
+          oid int not null auto_increment primary key,
+          cid int,
+          foreign key(cid) refrences ptabel(cid)
+
+      );
+       joining of two tables on basis of coloumns is known as join jab hame 2 tables ko use krna ho tb 
+       inner joint se ham wo value retreive kr skte hai jiski value same hai 
+       jaise ptable aur ftable me same hai cid to
+        select * from ptable join ftable on ptabel.cid=ftable.cid;
+        same value ki madad se ham 2 table ko join kr skte hai ;
+
+        left join me left table ki saari values print ho jaati hai aur common wali bhi jo right me hai 
+        par uncommon wali me jo right me hai usme null chala jaata hai 
+        yehi right join me hota hai bs farq itna hai usme right ki values dikhti hai left ki nhi 
+
+        select * from ptable left join ftable on ptable.cid=ftable.cid;
+         
+        

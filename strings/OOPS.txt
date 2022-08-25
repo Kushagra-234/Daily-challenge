@@ -1,0 +1,8 @@
+class manu{
+
+};
+class is user defined datatype 
+agar khaali class bna do to fir object ko memory milegi 1 byte wrna utni milegi jitni properties ko milti hai 
+
+
+manu h1;
