@@ -36,6 +36,11 @@ class Hero{
     int  main(){
         Hero ramesh;
         // ye hota hai data to statically allocate krna;
+        Hero *b=new Hero;
+        cout<<b->level<<endl;
+        // b me address pda hoga use derefrence kroge to aaega value
+        // heap me memory allocate hogi 
+        // dynamically allocate krna memory ko 
         
         cout<<ramesh.level<<endl;
         cout<<ramesh.gethealth()<<endl;
