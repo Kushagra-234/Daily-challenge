@@ -25,10 +25,8 @@ class Superman:public Hero{
 
 };
 
-int main(){
-    Superman ramesh;
-    cout<<ramesh.age<<endl;
-}
+
+
 
 // types of inheritance 
 // single isme ek class ek superclass ko imherit krti hai 
@@ -57,6 +55,24 @@ class C:public A,public B{
 // compile time polymorphism wo polymorphism hai jisme 
 // compile timepolymorphism wo polymorphism hai jo resolev hota hai compile time me
 // ye 2 tareeke se hota hai function overloading,operator overlaoding
+// function overloading me same name ka function alag tareeke se kaam kr rha hota hai alag agal time pe
+// ye hota hai by difference of paramters and types of parametr aur opertor overloading me ek operaotr different tareeke se beave krta hai
+// ek operator ko different tareeke se behave krwwa skte hai ham operaot overlaoding mer 
+
+class Z{
+    public:
+    void operator() () {
+        cout<<"mai hun"<<endl;
+
+
+    }
+};
+int main(){
+    Superman ramesh;
+    cout<<ramesh.age<<endl;
+    Z obj1;
+    obj1();
+}
 
     
 

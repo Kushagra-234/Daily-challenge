@@ -15,7 +15,7 @@ int main(){
 
     }
     if(temp % 3 ==0){
-        return 1;
+        cout<<"divisible"<<endl;
     }
     else{
         return 0;
