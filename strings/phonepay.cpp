@@ -25,6 +25,7 @@ vector<int> batonPass(int n, long t){
                 ans.push_back(i);
                 return ans;
                 // return it 
+                // debugging of phon pay 
               }
             }
           }
