@@ -114,5 +114,55 @@ values(value1,value2,value3);
         yehi right join me hota hai bs farq itna hai usme right ki values dikhti hai left ki nhi 
 
         select * from ptable left join ftable on ptable.cid=ftable.cid;
+
+
+        ddl is data definition language  define schema such as 
+        create,alter,drop,truncate
+
+        dml is data manipulative language insert,update,delete
+
+        dql is data query language retrieve data select 
+
+        dcl data control language who can view or change database such as grant 
+        tcl transaction control language start commit rollback 
+
+
+        create table t1(
+
+            ID int;
+            name varchar(255);
+            primary key(ID);
+
+
+
+        );
+
+        normalisation ka mtlb removing redundancy ek se jyada same data from table
+
+        1nf me ek table me multivalued attributes nhi hone chahiye 
+         2 nf me table in 1 nf and non prime attributes should be fully dependent on ck and not partially
+         on ck 
+
+         3nf me table should be in 2nf and no transitive dependency no npa can determine another npa
+
+         bcnf me left side of any fd is ck or super key
+
+         super key is combination of attribute with candidate key 
+
+         
+         select max(salary) from emp
+         where sal not in (select max(salary) from emp);
+
+
+         select max(sal) from emp
+         where sal not in(select max(sal));
+
+
+          department me highest salary
+
+          select max(salary) from emp,deptno 
+
+          group by depno
+
          
         

@@ -1,3 +1,5 @@
- Hero(){
-    //     cout<<"constructor called"<<endl;
-    // }
+
+    int age;
+};
+
+// ye public,protected,private mode of access 
