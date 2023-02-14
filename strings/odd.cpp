@@ -16,3 +16,6 @@ int main(){
 
 return 0;
 }
+
+
+// select * from emp e1 where n-1=(select count(Distinct salary) from emp e2 where e2.salary>e1.salary)

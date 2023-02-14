@@ -1,0 +1,39 @@
+second highest salary 
+
+select max(sal) from emp;
+where sal not in (select max(sal) from emp);
+
+    to fetch more than one record we use in operator 
+
+
+  nth highest salary 
+  corelated nested query isme outer query ka istemaal ho rha hota hai inner query me
+
+    select * from emp e1 where n-1=( select count (distinct salary) from emp e2 where e2.salary > e1.salary ) 
+
+    dml autocommit nhi hota hai 
+    update employee(tablename) set doj=15.9.2020 where eid=1;
+
+    fullname dikhane ke liye pipe operator ka use 
+
+    select fname ||" " ||lname from emp; 
+
+    select TO_CHAR(LAST_DAY(ADD_MONTH(sysdate,-1)),DAY) from dual;
+
+
+ create table emp2 as (select * from emp);
+
+ department wise count 
+
+ select count(*) from emp group by DEPT
+ having use hota hai gropu by ke saath
+
+ select department who has less than 4 person wrming 
+
+
+ select DEPT,count(*) from emp group by DEPT having count(*)<4;
+
+
+ sql defined schema ,vertically scalable,not for heirarchial structure stored in table and coloumn
+
+ nosql undefined schema ,horizontally scalable ,for heirarchial structure stored in key value pair 

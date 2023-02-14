@@ -50,7 +50,7 @@ class node{
 
     // find last node
     // node*temp=*head;
-    // while(temp->next=NULL)
+    // while(temp->next!=NULL)
     // {
         // temp=temp->next;
 
