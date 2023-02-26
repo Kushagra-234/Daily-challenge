@@ -39,3 +39,7 @@ cout<<st.peek()<<endl;
 // cout<<st;
 return 0;
 }
+
+
+
+// stack top is topmost element returned by stack.top();
