@@ -48,3 +48,4 @@ class Hero{
         cout<<ramesh.gethealth()<<endl;
     }
 
+// ramesh cin
